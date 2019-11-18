@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#46a5ce</color>
+    <color name="colorPrimaryDark">#564f45</color>
+    <color name="colorAccent">#46a5ce</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="darkgray">#3d4955</color>
+    <color name="darkgreen">#24A3B5</color>
+    <color name="darkOrange">#ff2200</color>
+    <color name="green">#02a03c</color>
+    <color name="gray">#35434e</color>
+    <color name="red">#FFDE2915</color>
+    <color name="lightgreen">#FFC5E2C5</color>
+    <color name="blue">#24A3B5</color>
+    <color name="lightgray">#FFB9BABA</color>
+    <color name="purple">#8a56e9</color>
+    <color name="brown">#FFB45E61</color>
+    <color name="toplayout">#cd46a5ce</color>
+    //bottomnavgation Color
+    <color name="barbottom">#42C0FB</color>
+    <color name="grey">#b3b3b3</color>
+
+    <color name="make_me_blue">#25c8d9</color>
+
+    //MainintroOnbaording Color
+    <color name="color_material_metaphor">#039BE5</color>
+    <color name="color_material_bold">#67cdff</color>
+    <color name="color_material_motion">#6A1B9A</color>
+    <color name="color_material_shadow">#c2deec</color>
+    <color name="color_permissions">#FFEB3B</color>
+    <color name="color_custom_fragment_1">#E64A19</color>
+    <color name="color_custom_fragment_2">#3F51B5</color>
+    <color name="color_canteen">#fdfdfd</color>
+
+    <color name="color_dark_material_metaphor">#0277BD</color>
+    <color name="color_dark_material_bold">#0277BD</color>
+    <color name="color_dark_material_motion">#4A148C</color>
+    <color name="color_dark_material_shadow">#0277BD</color>
+    <color name="color_dark_permissions">#FBC02D</color>
+    <color name="color_dark_custom_fragment_1">#BF360C</color>
+    <color name="color_dark_custom_fragment_2">#303F9F</color>
+    <color name="color_dark_canteen">#ebeef0</color>
+</resources>

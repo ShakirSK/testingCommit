@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Your societies accounts in one application"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#faf7f7"
+        />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="391dp"
+        android:layout_height="254dp"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignEnd="@+id/textView10"
+        android:layout_alignRight="@+id/textView10"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        app:cardBackgroundColor="#0d69a1"
+        app:cardCornerRadius="6dp"
+        app:contentPadding="7dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="115dp">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="2dp"
+                android:layout_height="85dp"
+
+                android:layout_marginLeft="4dp"
+                android:background="@android:color/black" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/dot" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_below="@+id/view"
+
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/dot" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:text="Application has"
+            android:textColor="#faf7f7"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="110dp"
+            android:gravity="center"
+            android:text="Manager"
+            android:textColor="#faf7f7"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="190dp"
+            android:gravity="center"
+            android:text="User"
+            android:textColor="#faf7f7"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="230dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#faf7f7"
+            android:textSize="15dp" />
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
