@@ -24,8 +24,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Onboarding.MainIntroActivity"
-            android:theme="@style/Theme.Intro"/>
+        <activity android:name=".testingground"></activity>
+        <activity
+            android:name=".Onboarding.MainIntroActivity"
+            android:theme="@style/Theme.Intro" />
         <activity android:name=".user.Become_a_member.form_of_user" />
         <activity android:name=".user.Become_a_member.list_of_societies" />
         <activity android:name=".Onboarding.Onboarding_Screen" /> <!-- Define your provider -->
