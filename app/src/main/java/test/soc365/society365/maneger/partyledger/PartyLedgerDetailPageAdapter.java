@@ -50,7 +50,7 @@ public class PartyLedgerDetailPageAdapter extends RecyclerView.Adapter<PartyLedg
     private List<partydetailmodel> contactListFiltered;
    /* int ob = Integer.parseInt(openbalance);
     int obc = Integer.parseInt(openbalance);*/
-    static int cb;
+    public static int cb;
 
     static String drcr;
     String narr,bd,cd,cn,pn,ln;

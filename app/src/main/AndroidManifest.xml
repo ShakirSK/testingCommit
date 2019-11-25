@@ -24,7 +24,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".testingground"></activity>
+        <activity android:name=".user.partyledgerUSER.PartyLedgerDetailPageUSER"></activity>
+        <activity android:name=".user.Past_Payment_History.user_payment_history_activity" />
+        <activity android:name=".user.userprofile.u_MyProfile_Activity" />
+        <activity android:name=".testingground" />
         <activity
             android:name=".Onboarding.MainIntroActivity"
             android:theme="@style/Theme.Intro" />

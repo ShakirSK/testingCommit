@@ -14,7 +14,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tool"
-            android:background="@drawable/gradient">
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:background="@color/barbottom">
 
           <!--  <ImageView
                 android:id="@+id/notification"
@@ -30,7 +31,33 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_below="@+id/app"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="#ffffff"
+            android:foregroundGravity="bottom"
+            android:visibility="visible"
+            app:itemIconTint="@drawable/nav_item_color_state"
+            app:itemTextColor="@drawable/nav_item_color_state"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:menu="@menu/navigationbottom_user" />
+
+
+    </RelativeLayout>
 
 </RelativeLayout>
 

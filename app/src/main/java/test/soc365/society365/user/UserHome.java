@@ -5,9 +5,15 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import test.soc365.society365.R;
 import test.soc365.society365.maneger.PartyFragment;
@@ -24,6 +30,10 @@ public class UserHome extends Fragment
     CardView cardview, cardview2,cardview3,cardview4,cardview5,cardview6,cardviewpl;
 
     String useremailid,usermobile,usrid,utype,sid;
+
+
+    private LinearLayoutManager linearLayoutManager;
+    private DividerItemDecoration dividerItemDecoration;
 
     @Nullable
     @Override
@@ -195,6 +205,31 @@ public class UserHome extends Fragment
                 fragmentTransaction.commit();
             }
         });
+
+
+        final RecyclerView recyclerView = (RecyclerView)view.findViewById(R.id.recycleview);
+
+        linearLayoutManager = new LinearLayoutManager(getContext());
+
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), linearLayoutManager.getOrientation());
+
+
+        final int[] images = {R.drawable.money, R.drawable.rupee, R.drawable.receipt,
+                R.drawable.hand, R.drawable.rupee, R.drawable.receipt
+                };
+
+        final ArrayList text = new ArrayList<>(Arrays.asList("Pay Bill","Request","Audit Reports",
+                "Bulletin Board", "Society Activity","MOM"));
+
+
+
+        UserHomeAdapter adapter = new UserHomeAdapter(getActivity(),text,images);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.addItemDecoration(dividerItemDecoration);
+        recyclerView.setAdapter(adapter);
+
         return view;
     }
 

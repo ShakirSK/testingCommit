@@ -109,15 +109,7 @@ public class PartyFragment extends Fragment {
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recycleview);
 
-        //calander to choose custom date
-        builder = new AlertDialog.Builder(getActivity());
-        db = new DatabaseHelper(getActivity());
-        db.getdata(getContext());
-        movieList = new ArrayList<>();
 
-
-/*        adapter = new PartyAdapter(getContext(),todos);*/
-        adapter = new PartyAdapter(getContext(),todos);
 
         linearLayoutManager = new LinearLayoutManager(getContext());
 
@@ -127,8 +119,6 @@ public class PartyFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.addItemDecoration(dividerItemDecoration);
-        recyclerView.setAdapter(adapter);
-
 
 
         sharedPreferences = this.getActivity().getSharedPreferences("test.soc365.society365", Context.MODE_PRIVATE);
@@ -138,11 +128,28 @@ public class PartyFragment extends Fragment {
 
         usertype = sharedPreferences.getString("usertype","0" );
 
+        movieList = new ArrayList<>();
+
+        //calander to choose custom date
+        builder = new AlertDialog.Builder(getActivity());
+
+        if(usertype.equals("2")) {
+            getData();
+        }
+        else{
+           db = new DatabaseHelper(getActivity());
+            db.getdata(getContext());
+
+
+            /*        adapter = new PartyAdapter(getContext(),todos);*/
+            adapter = new PartyAdapter(getContext(),todos);
+            recyclerView.setAdapter(adapter);
+
+
+        }
 
 
 
-
-       // getData();
 
         return view;
     }
@@ -195,7 +202,13 @@ public class PartyFragment extends Fragment {
             final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(),
                     android.R.layout.simple_selectable_list_item);
             arrayAdapter.add("All Groups");
-            arrayAdapter.addAll(partyname2club);
+
+            if(usertype.equals("2")) {
+                arrayAdapter.addAll(partynametype);
+            }
+            else{
+                arrayAdapter.addAll(partyname2club);
+            }
           /*  arrayAdapter.add("This Year");
             arrayAdapter.add("Last Year");
             arrayAdapter.add("Custom Date");*/
@@ -313,14 +326,16 @@ public class PartyFragment extends Fragment {
                             partynametype.clear();
                             partynametype.addAll(primesWithoutDuplicates);
                             Collections.sort(partynametype, String.CASE_INSENSITIVE_ORDER);
-                            Log.d("partynametype",String.valueOf(partynametype));
+                            Log.d("movieListx",String.valueOf(movieList));
+                            adapter = new PartyAdapter(getContext(),movieList);
+                            recyclerView.setAdapter(adapter);
+                            adapter.notifyDataSetChanged();
 
 
                         }else {
                             // reportarray.clear();
                             // Toast.makeText(getApplicationContext(),"No Records" , Toast.LENGTH_SHORT).show();
                         }
-                        adapter.notifyDataSetChanged();
 
 
 
@@ -329,7 +344,6 @@ public class PartyFragment extends Fragment {
                         progressDialog.dismiss();
                     }
 
-                adapter.notifyDataSetChanged();
                 progressDialog.dismiss();
             }
         }, new Response.ErrorListener() {

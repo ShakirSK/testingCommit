@@ -13,7 +13,15 @@
     <include
         layout="@layout/user_aap_bar_home"/>
 
-    <android.support.design.widget.NavigationView
+    <FrameLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:ignore="MergeRootFrame" />
+
+ <!--   <android.support.design.widget.NavigationView
         android:id="@+id/mnav_userview"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -23,5 +31,25 @@
         app:itemTextColor="@color/colorPrimary"
         app:headerLayout="@layout/user_headerlayout">
     </android.support.design.widget.NavigationView>
+-->
 
+    <android.support.design.widget.NavigationView
+        android:id="@+id/mnav_userview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:itemTextColor="@color/colorPrimary"
+        app:headerLayout="@layout/user_headerlayout">
+
+        <ExpandableListView
+            android:id="@+id/lvExp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="190dp"
+            android:dividerHeight="0dp"
+            android:choiceMode="singleChoice"
+            android:groupIndicator="@color/white" />
+
+    </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>
